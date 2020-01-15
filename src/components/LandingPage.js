@@ -3,7 +3,7 @@ import './LandingPage.css';
 import fetchPlayer from '../utils/fetchPlayer';
 
 const LandingPage = () => {
-  const [username, setUsername] = React.useState('kin-au');
+  const [username, setUsername] = React.useState('');
   const updateUsername = event => {
     setUsername(event.target.value);
   };
