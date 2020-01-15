@@ -1,4 +1,4 @@
-import { token } from process.env.REACT_APP_GITHUB_TOKEN;
+const token = process.env.REACT_APP_GITHUB_TOKEN;
 
 const checkResponse = response => {
   if (response.status !== 200) {
@@ -8,11 +8,11 @@ const checkResponse = response => {
   return response.json();
 };
 
-const fetchPlayer = url => {
+const fetchPlayer = ({ username }) => {
   return fetch(`https://api.github.com/users/${username}?access_token=${token}`)
     .then(checkResponse)
     .catch(err => {
-      throw new Error(`fetch getDataUser failed. ${err}`);
+      throw new Error(`fetchPlayer failed with error: ${err}`);
     });
 };
 

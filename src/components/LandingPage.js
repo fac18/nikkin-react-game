@@ -1,6 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
-// import fetchPlayer from '../utils/fetchPlayer';
+import fetchPlayer from '../utils/fetchPlayer';
 
 const LandingPage = () => {
   const [username, setUsername] = React.useState('kin-au');
@@ -19,7 +19,14 @@ const LandingPage = () => {
           value={username}
           onChange={event => updateUsername(event)}
         />
-        <button>Go!</button>
+        <button
+          onClick={event => {
+            event.preventDefault();
+            fetchPlayer(username);
+          }}
+        >
+          Go!
+        </button>
       </form>
     </main>
   );
