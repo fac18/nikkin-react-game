@@ -8,7 +8,8 @@ const checkResponse = response => {
   return response.json();
 };
 
-const fetchPlayer = ({ username }) => {
+const fetchPlayer = username => {
+  console.log(`username in fetchPlayer is ${username}`);
   return fetch(`https://api.github.com/users/${username}?access_token=${token}`)
     .then(checkResponse)
     .catch(err => {
