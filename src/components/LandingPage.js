@@ -9,8 +9,7 @@ const LandingPage = () => {
   };
   return (
     <main className='landingPage'>
-      <h1>THE GAME NAME</h1>
-      <form>
+      <form className='usernameForm'>
         <label htmlFor='newPlayer'>New Player</label>
         <input
           type='text'
