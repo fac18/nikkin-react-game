@@ -25,6 +25,7 @@ function App() {
         )}
         {gamePage === 'PlayingField' && (
           <PlayingField
+            setGamePage={setGamePage}
             userData={userData}
             playing={playing}
             // setPlaying={setPlaying}
