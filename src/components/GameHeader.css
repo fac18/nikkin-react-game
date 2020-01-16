@@ -9,7 +9,6 @@
 }
 
 .gameName {
-  position: absolute;
-  margin: 1rem;
+  margin: auto;
   font-family: "Londrina Outline", cursive;
 }
