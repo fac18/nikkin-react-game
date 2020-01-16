@@ -14,7 +14,7 @@ const LandingPage = props => {
     <main className="landingPage">
       <form className="usernameForm">
         <label className="new-player-label" htmlFor="newPlayer">
-          New Player:{" "}
+          New Player:
         </label>
         <input
           type="text"
