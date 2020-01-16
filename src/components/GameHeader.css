@@ -1,13 +1,15 @@
 .gameHeader {
-  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: lightyellow;
   margin: 2rem;
   height: 10vh;
-  width: 70vw;
   border-radius: 10px;
 }
 
 .gameName {
   position: absolute;
   margin: 1rem;
+  font-family: "Londrina Outline", cursive;
 }
