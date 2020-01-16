@@ -32,6 +32,7 @@
   border: 0px solid;
   padding: 10px 20px;
   box-shadow: 0 5px 3px #a9a9a9;
+  width: 150px;
 }
 .find-me-btn:hover,
 .play-btn:hover,
