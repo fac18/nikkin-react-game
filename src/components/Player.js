@@ -1,9 +1,9 @@
 import React from "react";
 import "./Player.css";
 
-const Player = ({ githubAvatar }) => (
+const Player = ({ userData }) => (
   <div>
-    <img src={githubAvatar} alt="player" />
+    <img src={userData.avatar_url} alt="player" />
   </div>
 );
 
