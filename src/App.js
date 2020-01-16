@@ -10,7 +10,7 @@ function App() {
       <header className="App-header"></header>
       <section>
         <LandingPage />
-        <Player url={playerAvatar} />
+        <Player />
       </section>
     </div>
   );

@@ -1,11 +1,10 @@
 import React from "react";
+import "./Player.css";
 
-const Player = ({ githubObject }) => {
-  return (
-    <div>
-      <img src={githubObject.avatar_url} />
-    </div>
-  );
-};
+const Player = ({ githubAvatar }) => (
+  <div>
+    <img src={githubAvatar} alt="player" />
+  </div>
+);
 
 export default Player;
