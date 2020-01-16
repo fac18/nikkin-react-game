@@ -8,6 +8,7 @@ import PlayingField from './components/PlayingField';
 function App() {
   const [gamePage, setGamePage] = React.useState('LandingPage');
   const [userData, setUserData] = React.useState(null);
+  const [playing, setPlaying] = React.useState(false);
 
   return (
     <div className='background'>
@@ -18,9 +19,17 @@ function App() {
             setGamePage={setGamePage}
             userData={userData}
             setUserData={setUserData}
+            playing={playing}
+            setPlaying={setPlaying}
           />
         )}
-        {gamePage === 'PlayingField' && <PlayingField userData={userData} />}
+        {gamePage === 'PlayingField' && (
+          <PlayingField
+            userData={userData}
+            playing={playing}
+            // setPlaying={setPlaying}
+          />
+        )}
       </section>
     </div>
   );

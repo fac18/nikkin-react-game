@@ -6,7 +6,11 @@ const PlayingField = props => {
 
   return (
     <main className='playingField'>
-      <Player userData={props.userData} />
+      <Player
+        userData={props.userData}
+        playing={props.playing}
+        setPlaying={props.setPlaying}
+      />
     </main>
   );
 };
