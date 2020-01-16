@@ -1,12 +1,23 @@
-import React from 'react';
-import Player from './Player';
+import React from "react";
+import Player from "./Player";
+import "./PlayingField.css";
+import "./LandingPage.css";
 
 const PlayingField = props => {
-  console.log('we here');
+  console.log("we here");
 
   return (
-    <main className='playingField'>
+    <main className="playingField">
       <Player userData={props.userData} />
+      <button
+        className="exit-btn"
+        onClick={event => {
+          event.preventDefault();
+          props.setGamePage("LandingPage");
+        }}
+      >
+        Exit Game
+      </button>
     </main>
   );
 };

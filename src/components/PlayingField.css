@@ -1,0 +1,9 @@
+.playingField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightyellow;
+  margin: 2rem;
+  height: 70vh;
+  border-radius: 10px;
+}
