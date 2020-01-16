@@ -1,27 +1,30 @@
-import React from 'react';
-import './LandingPage.css';
-import fetchPlayer from '../utils/fetchPlayer';
-import Player from './Player';
-import App from '../App';
+import React from "react";
+import "./LandingPage.css";
+import fetchPlayer from "../utils/fetchPlayer";
+import Player from "./Player";
+// import App from '../App';
 
 const LandingPage = props => {
-  const [username, setUsername] = React.useState('');
+  const [username, setUsername] = React.useState("");
   const updateUsername = event => {
     setUsername(event.target.value);
   };
 
   return (
-    <main className='landingPage'>
-      <form className='usernameForm'>
-        <label htmlFor='newPlayer'>New Player</label>
+    <main className="landingPage">
+      <form className="usernameForm">
+        <label className="new-player-label" htmlFor="newPlayer">
+          New Player:{" "}
+        </label>
         <input
-          type='text'
-          id='newPlayer'
-          placeholder='Your Github username'
+          type="text"
+          id="newPlayer"
+          placeholder="Enter Github username"
           value={username}
           onChange={event => updateUsername(event)}
         />
         <button
+          className="find-me-btn"
           onClick={event => {
             event.preventDefault();
             fetchPlayer(username).then(data => props.setUserData(data));
@@ -32,9 +35,10 @@ const LandingPage = props => {
         {props.userData ? <Player userData={props.userData} /> : null}
         {props.userData ? (
           <button
+            className="play-btn"
             onClick={event => {
               event.preventDefault();
-              props.setGamePage('PlayingField');
+              props.setGamePage("PlayingField");
             }}
           >
             Play!

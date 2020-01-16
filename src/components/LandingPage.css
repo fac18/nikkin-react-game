@@ -14,3 +14,32 @@
   align-items: center;
   margin: 1rem;
 }
+#newPlayer {
+  padding: 10px;
+  margin: 20px;
+}
+.new-player-label {
+  font-size: 20px;
+  font-family: "Londrina Outline", cursive;
+}
+.find-me-btn,
+.play-btn {
+  background-color: #008cba;
+  border-radius: 9px;
+  color: white;
+  font-size: 20px;
+  border: 0px solid;
+  padding: 10px 20px;
+  box-shadow: 0 5px 3px #a9a9a9;
+}
+.find-me-btn:hover,
+.play-btn:hover {
+  cursor: pointer;
+}
+
+.find-me-btn:active,
+.play-btn:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px #a9a9a9;
+  transform: translateY(3px);
+}
