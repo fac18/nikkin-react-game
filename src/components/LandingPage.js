@@ -8,7 +8,7 @@ const LandingPage = () => {
     setUsername(event.target.value);
   };
   return (
-    <main>
+    <main className='landingPage'>
       <h1>THE GAME NAME</h1>
       <form>
         <label htmlFor='newPlayer'>New Player</label>
