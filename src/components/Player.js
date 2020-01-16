@@ -1,10 +1,13 @@
-import React from "react";
-import "./Player.css";
+import React from 'react';
+import './Player.css';
 
-const Player = ({ userData }) => (
-  <div>
-    <img src={userData.avatar_url} alt="player" />
-  </div>
-);
+const Player = ({ userData }) => {
+  console.log(`userData is ${userData}`);
+  return (
+    <div>
+      <img src={userData.avatar_url} alt='player avatar' />
+    </div>
+  );
+};
 
 export default Player;
