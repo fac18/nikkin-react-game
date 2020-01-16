@@ -1,35 +1,45 @@
-import React from "react";
-import "./LandingPage.css";
-import fetchPlayer from "../utils/fetchPlayer";
-import Player from "./Player";
+import React from 'react';
+import './LandingPage.css';
+import fetchPlayer from '../utils/fetchPlayer';
+import Player from './Player';
+import App from '../App';
 
-const LandingPage = () => {
-  const [username, setUsername] = React.useState("");
+const LandingPage = props => {
+  const [username, setUsername] = React.useState('');
   const updateUsername = event => {
     setUsername(event.target.value);
   };
-  const [userData, setUserData] = React.useState(null);
 
   return (
-    <main className="landingPage">
-      <form className="usernameForm">
-        <label htmlFor="newPlayer">New Player</label>
+    <main className='landingPage'>
+      <form className='usernameForm'>
+        <label htmlFor='newPlayer'>New Player</label>
         <input
-          type="text"
-          id="newPlayer"
-          placeholder="Your Github username"
+          type='text'
+          id='newPlayer'
+          placeholder='Your Github username'
           value={username}
           onChange={event => updateUsername(event)}
         />
         <button
           onClick={event => {
             event.preventDefault();
-            fetchPlayer(username).then(data => setUserData(data));
+            fetchPlayer(username).then(data => props.setUserData(data));
           }}
         >
-          Go!
+          Find me
         </button>
-        {userData ? <Player userData={userData} /> : null}
+        {props.userData ? <Player userData={props.userData} /> : null}
+        {props.userData ? (
+          <button
+            onClick={event => {
+              event.preventDefault();
+              props.setGamePage('PlayingField');
+            }}
+          >
+            Play!
+          </button>
+        ) : null}
       </form>
     </main>
   );
