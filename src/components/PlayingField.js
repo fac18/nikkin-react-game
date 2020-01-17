@@ -4,8 +4,6 @@ import "./PlayingField.css";
 import "./LandingPage.css";
 
 const PlayingField = props => {
-  console.log("we here");
-
   return (
     <main className="playingField">
       <Player userData={props.userData} />
