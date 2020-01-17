@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import GameHeader from './components/GameHeader';
 import LandingPage from './components/LandingPage';
 import PlayingField from './components/PlayingField';
+=======
+import React from "react";
+import "./App.css";
+import GameHeader from "./components/GameHeader";
+import LandingPage from "./components/LandingPage";
+import PlayingField from "./components/PlayingField";
+>>>>>>> master
 
 function App() {
   const [gamePage, setGamePage] = React.useState('LandingPage');
