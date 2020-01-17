@@ -4,11 +4,6 @@ import './PlayingField.css';
 import './LandingPage.css';
 
 const PlayingField = props => {
-<<<<<<< HEAD
-  console.log('we in playingfield component');
-
-=======
->>>>>>> master
   return (
     <main className='playingField'>
       <Player playing={props.playing} userData={props.userData} />
