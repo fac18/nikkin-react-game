@@ -1,9 +1,11 @@
 .user-image-container {
   width: 100px;
+  position: absolute;
 }
 .user-image {
   width: 100%;
   border-radius: 50%;
   border: 2px double rgb(120, 163, 241);
   margin: 30px auto 10px auto;
+  top: 0;
 }
