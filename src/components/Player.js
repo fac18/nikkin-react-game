@@ -2,7 +2,7 @@ import React from 'react';
 import './Player.css';
 
 const Player = props => {
-  console.log(`userData is ${props.userData}`);
+  // console.log(`userData is ${props.userData}`);
 
   const [playerPosition, setPlayerPosition] = React.useState(0);
 
@@ -12,17 +12,18 @@ const Player = props => {
     // declaring playerFall outside of the IF statement so it can be accessed in the return function
     let playerFall;
     if (props.playing === true) {
-      console.log('WE PLAYING YO');
       // why didn't updatePlayerPosition function work outside of useEffect?
       // it gets re-declared each time the Player component is rendered
-      const updatePlayerPosition = num =>
-        setPlayerPosition(playerPosition + num);
-      playerFall = setInterval(() => {
-        console.log('inside playerFall setinterval');
-        updatePlayerPosition(1);
+      const updatePlayerPosition = playerPosition => {
+        setPlayerPosition(playerPosition + 10);
         player.style.top = `${playerPosition}px`;
-        console.log(playerPosition);
-      }, 1000 / 60);
+      };
+      playerFall = setInterval(() => {
+        updatePlayerPosition(playerPosition);
+        console.log(
+          `inside playerFall setinterval, playerPosition is: ${playerPosition}`
+        );
+      }, 1000 / 16);
     }
     return () => {
       clearInterval(playerFall);
@@ -32,17 +33,20 @@ const Player = props => {
   React.useEffect(() => {
     const player = document.getElementById('player');
     if (props.playing === true) {
-      const updatePlayerPosition = num =>
-        setPlayerPosition(playerPosition + num);
-      window.addEventListener('click', () => {
-        console.log('we in windows event listener');
-        updatePlayerPosition(-100);
+      const updatePlayerPosition = playerPosition => {
+        setPlayerPosition(playerPosition - 100);
         player.style.top = `${playerPosition}px`;
+      };
+      window.addEventListener('click', () => {
+        updatePlayerPosition(playerPosition);
+        console.log(
+          `inside windows.eventlistener, playerPosition is ${playerPosition}`
+        );
       });
     }
-    // return () => {
-    //   window.removeEventListener('click', () => {});
-    // };
+    return () => {
+      window.removeEventListener('click', () => {});
+    };
   }, [playerPosition, props.playing]);
 
   return (
