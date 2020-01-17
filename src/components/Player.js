@@ -2,7 +2,6 @@ import React from "react";
 import "./Player.css";
 
 const Player = ({ userData }) => {
-  console.log(`userData is ${userData}`);
   return (
     <div className="user-image-container">
       <img
