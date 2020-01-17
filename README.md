@@ -1,68 +1,88 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## team 
+# NIKKIN
+![](https://i.imgur.com/i9241aP.jpg)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### INSTALL INSTRUCTIONS
 
-### `npm start`
+* clone the repo
+* run ```npm i```
+* ask us for super secret ```.env``` deets
+* run ```npm start```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### BRAINSTORMING
 
-### `npm test`
+![](https://i.imgur.com/jWKU2xK.jpg)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### GAME SKETCHING
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](https://i.imgur.com/LBuBeDY.jpg)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### USER STORIES
 
-### `npm run eject`
+[x] As a user, I want to be able to enter my Github username and see my avatar
+[] As a user, I want to play the game using only one input (phone touch or mouse click or space bar)
+[] As a user, I want to play the game, avoiding obstacles using my input 
+[] As a user, I want to see my game score after losing
+[] As a user, I want to see how I rank amongst other players
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### IMMEDIATE ISSUES IDENTIFIED
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+HOW DO WE MAKE THE:
+- USER move ⬆️ and ⬇️??
+- BACKGROUND move ⬅️ and ➡️??
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![](https://i.imgur.com/CgxQusg.jpg)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### BRANCH NAMING
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Using ```fix_ ```,  ```feature_ ```  and ```test_```
 
-### Code Splitting
+![](https://i.imgur.com/2n4DbgZ.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+---
 
-### Analyzing the Bundle Size
+### ACCESSIBILITY 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![](https://i.imgur.com/0MKJecD.png)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### EVEN COMMMITS!
 
-### Advanced Configuration
+![](https://i.imgur.com/Jh8vPbF.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+'Thas good teamwork!'👏
 
-### Deployment
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### THE CODE
 
-### `npm run build` fails to minify
+* set page
+* interval
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
+
+### WE WISH WE COULD HAVE...
+
+* More tests
+* An actual playable game
+* Our health
+* More time
+* More 
+
+---
+
+THANKS.
+
