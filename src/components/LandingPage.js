@@ -11,15 +11,9 @@ const LandingPage = props => {
   };
 
   return (
-<<<<<<< HEAD
     <main className='landingPage'>
       <form className='usernameForm'>
         <label className='new-player-label' htmlFor='newPlayer'>
-=======
-    <main className="landingPage">
-      <form className="usernameForm">
-        <label className="new-player-label" htmlFor="newPlayer">
->>>>>>> master
           New Player:
         </label>
         <input

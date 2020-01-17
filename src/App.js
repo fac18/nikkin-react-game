@@ -28,7 +28,7 @@ function App() {
             setGamePage={setGamePage}
             userData={userData}
             playing={playing}
-            // setPlaying={setPlaying}
+            setPlaying={setPlaying}
           />
         )}
       </section>
