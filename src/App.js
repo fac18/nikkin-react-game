@@ -1,19 +1,19 @@
-import React from 'react';
-import './App.css';
-import GameHeader from './components/GameHeader';
-import LandingPage from './components/LandingPage';
-import PlayingField from './components/PlayingField';
+import React from "react";
+import "./App.css";
+import GameHeader from "./components/GameHeader/GameHeader";
+import LandingPage from "./components/LandingPage/LandingPage";
+import PlayingField from "./components/PlayingField/PlayingField";
 
 function App() {
-  const [gamePage, setGamePage] = React.useState('LandingPage');
+  const [gamePage, setGamePage] = React.useState("LandingPage");
   const [userData, setUserData] = React.useState(null);
   const [playing, setPlaying] = React.useState(false);
 
   return (
-    <div className='background'>
+    <div className="background">
       <GameHeader />
       <section>
-        {gamePage === 'LandingPage' && (
+        {gamePage === "LandingPage" && (
           <LandingPage
             setGamePage={setGamePage}
             userData={userData}
@@ -22,7 +22,7 @@ function App() {
             setPlaying={setPlaying}
           />
         )}
-        {gamePage === 'PlayingField' && (
+        {gamePage === "PlayingField" && (
           <PlayingField
             setGamePage={setGamePage}
             userData={userData}

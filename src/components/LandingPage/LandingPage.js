@@ -1,6 +1,6 @@
 import React from "react";
 import "./LandingPage.css";
-import fetchPlayer from "../utils/fetchPlayer";
+import fetchPlayer from "../../utils/fetchPlayer";
 
 const LandingPage = props => {
   const [username, setUsername] = React.useState("");
