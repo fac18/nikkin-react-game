@@ -1,61 +1,58 @@
-import React from 'react';
-import './Player.css';
+import React, { useEffect, useState } from "react";
+import "./Player.css";
 
 const Player = props => {
-  // console.log(`userData is ${props.userData}`);
+  const [playerPosition, setPlayerPosition] = useState(0);
 
-  const [playerPosition, setPlayerPosition] = React.useState(0);
+  // commented-out code retained for reference
+  // would use the imageRef and set playerPosition in a useEffect,
+  // however we are updating 'top' position using inline style in img tag
 
-  React.useEffect(() => {
-    // declaring Player outside of useEffect gives error, why?
-    const player = document.getElementById('player');
-    // declaring playerFall outside of the IF statement so it can be accessed in the return function
-    let playerFall;
-    if (props.playing === true) {
-      // why didn't updatePlayerPosition function work outside of useEffect?
-      // it gets re-declared each time the Player component is rendered
-      const updatePlayerPosition = playerPosition => {
-        setPlayerPosition(playerPosition + 10);
-        player.style.top = `${playerPosition}px`;
-      };
-      playerFall = setInterval(() => {
-        updatePlayerPosition(playerPosition);
-        console.log(
-          `inside playerFall setinterval, playerPosition is: ${playerPosition}`
-        );
-      }, 1000 / 16);
-    }
+  // const imageRef = useRef(null);
+
+  // useEffect(() => {
+  //   imageRef.current.style.top = `${playerPosition}px`;
+  // }, [playerPosition]);
+
+  useEffect(() => {
+    const updatePlayerPosition = () => {
+      setPlayerPosition(position => position + 10);
+    };
+    const playerFall = setInterval(() => {
+      updatePlayerPosition();
+      console.log(
+        `inside playerFall setinterval, playerPosition is: ${playerPosition}`
+      );
+    }, 1000 / 15);
     return () => {
       clearInterval(playerFall);
     };
-  }, [playerPosition, props.playing]);
+  }, []);
 
-  React.useEffect(() => {
-    const player = document.getElementById('player');
-    if (props.playing === true) {
-      const updatePlayerPosition = playerPosition => {
-        setPlayerPosition(playerPosition - 100);
-        player.style.top = `${playerPosition}px`;
-      };
-      window.addEventListener('click', () => {
-        updatePlayerPosition(playerPosition);
-        console.log(
-          `inside windows.eventlistener, playerPosition is ${playerPosition}`
-        );
-      });
-    }
-    return () => {
-      window.removeEventListener('click', () => {});
+  useEffect(() => {
+    const handleClickEvent = () => {
+      if (props.playing) {
+        setPlayerPosition(playerPosition => playerPosition - 100);
+      }
     };
-  }, [playerPosition, props.playing]);
+    window.addEventListener("click", handleClickEvent);
+
+    return () => {
+      window.removeEventListener("click", handleClickEvent);
+    };
+  }, []);
+
+  // could use 'transform' instead of 'top' for better performance
+  // transform does not affect layout
 
   return (
-    <div className='user-image-container'>
+    <div className="user-image-container">
       <img
-        id='player'
-        className='user-image'
+        style={{ top: playerPosition }}
+        // ref={imageRef}
+        className="user-image"
         src={props.userData.avatar_url}
-        alt='player avatar'
+        alt="player avatar"
       />
     </div>
   );
